@@ -3,9 +3,6 @@ package de.yuffi81.scriptGenerator.parser
 import de.yuffi81.scriptGenerator.model.DialogLine
 
 
-/**
- * Created by Benjamin on 06.11.2014.
- */
 class SSAParser implements ISubtitleParser {
 
     private static String concatTextTokens (List<String> tokens) {
@@ -26,7 +23,8 @@ class SSAParser implements ISubtitleParser {
                 }
             }
         }
-        return dialogLines
+
+        dialogLines
     }
 
     @Override

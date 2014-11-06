@@ -3,9 +3,6 @@ package de.yuffi81.scriptGenerator.parser
 import de.yuffi81.scriptGenerator.model.DialogLine
 import spock.lang.*
 
-/**
- * Created by Benjamin on 06.11.2014.
- */
 class SSAParserTest extends Specification {
 
     def "should parse a valid line of dialog" () {

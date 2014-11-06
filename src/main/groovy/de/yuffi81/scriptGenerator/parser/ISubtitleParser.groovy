@@ -2,9 +2,6 @@ package de.yuffi81.scriptGenerator.parser
 
 import de.yuffi81.scriptGenerator.model.DialogLine
 
-/**
- * Created by Benjamin on 06.11.2014.
- */
 interface ISubtitleParser {
 
     /**
