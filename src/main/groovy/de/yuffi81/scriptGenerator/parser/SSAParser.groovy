@@ -42,7 +42,7 @@ class SSAParser implements ISubtitleParser {
             //text itself mey contain comas, so lets concat all tokens beginning at 9 to one string
             text  = concatTextTokens( tokens[9..tokens.size()-1])
 
-            dialogLine = new DialogLine(speaker: style, line: text)
+            dialogLine = new DialogLine(style, text)
         } else {
             //TODO: SSA parse exception
         }
