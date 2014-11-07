@@ -5,10 +5,6 @@ import de.yuffi81.scriptGenerator.model.DialogLine
 
 class SSAParser implements ISubtitleParser {
 
-    private static String concatTextTokens (List<String> tokens) {
-        tokens.join(",")
-    }
-
     @Override
     List<DialogLine> parseLines(String[] lines) {
         List<DialogLine> dialogLines = []
@@ -40,7 +36,7 @@ class SSAParser implements ISubtitleParser {
             style = tokens[3]
 
             //text itself mey contain comas, so lets concat all tokens beginning at 9 to one string
-            text  = concatTextTokens( tokens[9..tokens.size()-1])
+            text  = {it.join(",")} .call (tokens[9..tokens.size()-1])
 
             dialogLine = new DialogLine(style, text)
         } else {
