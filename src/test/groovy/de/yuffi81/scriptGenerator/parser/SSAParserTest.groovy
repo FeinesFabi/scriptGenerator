@@ -55,4 +55,20 @@ class SSAParserTest extends Specification {
             line3.line    == "Wait -"
 
     }
+
+    def "should parse a file" () {
+        given:
+            ISubtitleParser parser   = new SSAParser()
+            String          filePath = "D:\\yuffi81\\yuffi81s-subtitles_sorcetree\\ani\\english\\01.ass"
+            File            file     = new File(filePath)
+
+        when:
+            List<DialogLine> dialogLines  = parser.parseFile (file)
+            List<DialogLine> dialogLines2 = parser.parseFile (filePath)
+
+        then:
+            dialogLines
+            dialogLines2
+
+    }
 }

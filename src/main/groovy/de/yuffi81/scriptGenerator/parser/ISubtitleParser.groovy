@@ -17,4 +17,8 @@ interface ISubtitleParser {
      * @return parsed dialog line
      */
     DialogLine          parseLine   (String   line)
+
+    List<DialogLine>    parseFile   (File file)
+
+    List<DialogLine>    parseFile   (String filePath)
 }
